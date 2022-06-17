@@ -1,0 +1,29 @@
+#0) Write a function that takes the list of integers as an argument and returns the product of all of them
+
+def product(list1):
+  sum = 1
+  for value in list1:
+    sum *= value
+  return sum
+
+#1) Write a function that takes a list of integers as an argument and returns the sum of all of the even values
+def sum_even(list1):
+  sum = 0
+  for value in list1:
+    if value%2 == 0:
+      sum += value
+  return sum
+#2) Write a function that takes a list of strings and returns the longest string. If there are multiple long strings, return the one that occurs first in the list.
+def long_str(list1):
+  longer_str = list1[0]
+  for value in list1[1:-1:1]:
+    if len(longer_str) < len(value):
+      longer_str = value
+  return longer_str
+#3) Write a function that takes a list of strings and returns the one with the most vowels. If there are multiple strings with the most vowels, return the one that occurs last in the list.
+def most_vowel(list1):
+  most_vowel = list1[0]
+  for value in list1:
+    if most_vowel.count() < value.count(vowel):
+      most_vowel = value
+  return most_vowel
